@@ -1,0 +1,3201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Image Global - Professional Image Editing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--primary-color:#d87522;
+  --primary-hover:#d87522;
+  --text-color: #333;
+  --text-light: #666;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 0.375rem;
+    --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background-color: #fff;
+}
+
+/* Base Styles */
+:root {
+  --primary-color: #d87522;
+  --primary-hover:#d87522 ;
+  --secondary-color: #457b9d;
+  --dark-color: #1d3557;
+  --light-color: #f1faee;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+  --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+  --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* background: linear-gradient(120deg,#c4a2e9 0%, #b982f7 100%); */
+  /* overflow: hidden; */
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(165, 151, 151, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #d87522;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d87522;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d87522;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d87522;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid #e5e5e5;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Services Dropdown */
+.services-dropdown {
+  width: 700px;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.dropdown:hover .services-dropdown {
+  transform: translateX(-50%) translateY(0);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.service-category h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d87522;
+  padding-bottom: 0.5rem;
+}
+
+.service-category ul {
+  list-style: none;
+}
+
+.service-category li {
+  margin-bottom: 0.75rem;
+}
+
+.service-category a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+
+.service-category a:hover {
+  color: #d87522;
+  transform: translateX(8px);
+  background-color: #f8fafc;
+  padding-left: 0.5rem;
+}
+
+/* Company Dropdown */
+.company-dropdown {
+  width: 220px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  left: 0;
+}
+
+.company-dropdown a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.company-dropdown a:hover {
+  color: #d87522;
+  background-color: #f0f9ff;
+  transform: translateX(5px);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-yellow {
+  background-color: #d87522;
+  color: #000;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow:hover {
+  background-color: #d87522;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 4px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #4b5563;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1998;
+}
+.btn-yellow {
+  background-color: #0622fb;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow:hover {
+  background-color: #d87522;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+@media screen and (max-width: 576px) {
+    button.btn.btn-yellow {
+        display: none !important;
+    }
+}
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 350px;
+  height: 100vh;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8fafc;
+}
+
+.mobile-menu-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  background-color: #f3f4f6;
+  color: #d87522;
+}
+
+.mobile-menu-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+}
+
+.mobile-nav-link:hover {
+  color: #d87522;
+  background-color: #f3f4f6;
+  padding-left: 1.5rem;
+}
+/* ===== MOBILE MENU CONTENT - PREMIUM STYLING ===== */
+.mobile-menu-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 140px);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* ===== MOBILE DROPDOWN CONTENT - FIXED & PREMIUM ===== */
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    margin: 0.5rem 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MOBILE DROPDOWN LINKS - PREMIUM STYLING ===== */
+.mobile-dropdown-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+}
+
+.mobile-dropdown-link:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.mobile-dropdown-link:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.mobile-dropdown-link:hover,
+.mobile-dropdown-link:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    transform: translateX(8px);
+    padding-left: 2rem;
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+.mobile-dropdown-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(135deg, #d87522 0%, #c46a1e 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 3px 3px 0;
+}
+
+.mobile-dropdown-link:hover::before,
+.mobile-dropdown-link:focus::before {
+    transform: scaleY(1);
+}
+
+/* ===== SERVICE CATEGORIES - PREMIUM STYLING ===== */
+.mobile-service-category {
+    padding: 1.5rem 1rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.mobile-service-category:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.mobile-service-category:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.mobile-service-category h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d87522;
+    position: relative;
+    background: linear-gradient(135deg, #d87522 0%, #c46a1e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mobile-service-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-service-category li {
+    margin-bottom: 0.5rem;
+}
+
+.mobile-service-category a {
+    display: block;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+}
+
+.mobile-service-category a:hover,
+.mobile-service-category a:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    transform: translateX(8px);
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+/* ===== COMPANY LINKS - PREMIUM STYLING ===== */
+.mobile-company-links {
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-company-links a {
+    display: block;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.mobile-company-links a:hover,
+.mobile-company-links a:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    transform: translateX(8px);
+    border-color: rgba(216, 117, 34, 0.2);
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+/* ===== PREMIUM SCROLLBAR STYLING ===== */
+.mobile-menu-content::-webkit-scrollbar,
+.mobile-dropdown-content::-webkit-scrollbar,
+.mobile-company-links::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mobile-menu-content::-webkit-scrollbar-track,
+.mobile-dropdown-content::-webkit-scrollbar-track,
+.mobile-company-links::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.8);
+    border-radius: 3px;
+}
+
+.mobile-menu-content::-webkit-scrollbar-thumb,
+.mobile-dropdown-content::-webkit-scrollbar-thumb,
+.mobile-company-links::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-content::-webkit-scrollbar-thumb:hover,
+.mobile-dropdown-content::-webkit-scrollbar-thumb:hover,
+.mobile-company-links::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS - OPTIMIZED ===== */
+@media (max-width: 1023px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-dropdown {
+        width: 95vw;
+        padding: 1rem;
+        left: 2.5vw;
+        transform: translateY(-10px);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-category {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .company-dropdown {
+        width: 95vw;
+        left: 2.5vw;
+    }
+}
+
+/* ===== DEVICE-SPECIFIC OPTIMIZATIONS ===== */
+@media (max-height: 700px) {
+    .mobile-menu-content {
+        max-height: calc(100vh - 120px);
+    }
+    
+    .mobile-dropdown.active .mobile-dropdown-content {
+        max-height: 300px;
+    }
+    
+    .mobile-company-links {
+        max-height: 250px;
+    }
+}
+
+@media (max-height: 600px) {
+    .mobile-menu-content {
+        max-height: calc(100vh - 100px);
+    }
+    
+    .mobile-dropdown.active .mobile-dropdown-content {
+        max-height: 250px;
+    }
+    
+    .mobile-company-links {
+        max-height: 200px;
+    }
+    
+    .mobile-service-category {
+        padding: 1rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .mobile-menu-content {
+        max-height: calc(100vh - 80px);
+    }
+    
+    .mobile-dropdown.active .mobile-dropdown-content {
+        max-height: 200px;
+    }
+    
+    .mobile-company-links {
+        max-height: 150px;
+    }
+    
+    .mobile-service-category {
+        padding: 0.75rem;
+    }
+    
+    .mobile-dropdown-link,
+    .mobile-service-category a,
+    .mobile-company-links a {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== PREMIUM ANIMATIONS & EFFECTS ===== */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== FOCUS STATES FOR ACCESSIBILITY ===== */
+.mobile-dropdown-link:focus,
+.mobile-service-category a:focus,
+.mobile-company-links a:focus {
+    outline: 2px solid #d87522;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* ===== LOADING STATES ===== */
+.mobile-dropdown-content.loading {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Footer styles with red theme */
+.footer {
+  background-color: #2b2b3d; /* Dark background like in the image */
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  color: #d87522; /* Red color for titles */
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #d87522; /* Red divider */
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #d87522; /* Red background on hover */
+  transform: translateY(-3px);
+}
+
+/* Satisfaction badge */
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: -100px;
+}
+
+.satisfaction-badge {
+  width: 120px;
+  height: 120px;
+  background-color: #d87522; /* Orange badge */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-inner {
+  width: 100px;
+  height: 100px;
+  background-color: #d87522; /* Orange badge */
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.badge-text {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.badge-subtext {
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+.dmca-badge {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dmca-text {
+  display: block;
+  font-size: 10px;
+  color: #666;
+}
+
+.dmca-logo {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d87522; /* Orange DMCA text */
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #d87522; /* Orange on hover */
+  transform: translateX(5px);
+}
+
+/* Contact info */
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #d87522; /* Orange links */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Payment methods */
+.payment-methods {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.payment-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  background-color: #222233; /* Slightly darker background */
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .footer-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    max-width: 720px;
+  }
+  
+  .footer-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    max-width: 540px;
+  }
+  
+  .footer-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+  }
+  
+  .satisfaction-badge {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .badge-inner {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .badge-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 30px 15px;
+  }
+  
+  .footer-column {
+    padding: 0 10px;
+    margin-bottom: 25px;
+  }
+  
+  .social-icons {
+    flex-wrap: wrap;
+  }
+  
+  .badge-container {
+    flex-direction: column;
+  }
+  
+  .footer-bottom {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Special styling for very small screens */
+@media (max-width: 400px) {
+  .footer-title {
+    font-size: 15px;
+  }
+  
+  .footer-text, .contact-info p {
+    font-size: 13px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  
+  .satisfaction-badge {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .badge-inner {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .badge-text {
+    font-size: 20px;
+  }
+  
+  .badge-subtext {
+    font-size: 7px;
+  }
+}
+
+/* Background Removal Page Styles */
+
+/* Variables */
+:root {
+  --primary-teal: #d87522;
+  --dark-teal: #d87522;
+  --light-teal: #f5d5b8;
+  --very-light-teal: #fef7f0;
+  --medium-teal: #d87522;
+  --text-dark: #d87522;
+  --text-medium: #d87522;
+  --text-light: #6b7280;
+  --white: #ffffff;
+  --shadow-teal: rgba(216, 117, 34, 0.2);
+}
+
+/* Hero Section */
+.bg-removal-hero {
+  padding: 40px 0 80px;
+  background: linear-gradient(120deg, var(--very-light-teal) 0%, #f5d5b8 100%);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bg-removal-hero .container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.service-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: var(--primary-teal);
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-medium);
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow-teal);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow-teal);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background-color: var(--white);
+  color: var(--primary-teal);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--primary-teal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--very-light-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* Background Removal Demo */
+.bg-removal-demo {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px var(--shadow-teal);
+  border: 1px solid var(--light-teal);
+}
+
+.demo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.demo-image-wrapper {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.demo-image-wrapper.result {
+  position: relative;
+}
+
+.transparency-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #e89a4a 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  z-index: -1;
+}
+
+.demo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.demo-arrow {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px var(--shadow-teal);
+  border: 1px solid var(--light-teal);
+}
+
+.demo-caption {
+  text-align: center;
+}
+
+.demo-caption p {
+  font-size: 15px;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+/* Services Section */
+.bg-removal-services {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-medium);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--very-light-teal);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-teal);
+}
+
+.service-icon {
+  margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-teal);
+  margin-bottom: 12px;
+}
+
+.service-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+/* Benefits Section */
+.bg-removal-benefits {
+  padding: 100px 0;
+  background-color: var(--light-teal);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-teal);
+}
+
+.benefit-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--very-light-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-teal);
+  margin-bottom: 8px;
+}
+
+.benefit-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-medium);
+}
+
+/* Process Section */
+.bg-removal-process {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.process-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.process-step.reverse {
+  flex-direction: row-reverse;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-teal);
+  margin-bottom: 12px;
+}
+
+.step-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+.step-visual {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--shadow-teal);
+}
+
+.step-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Portfolio Section */
+.bg-removal-portfolio {
+  padding: 100px 0;
+  background-color: var(--very-light-teal);
+}
+
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--text-medium);
+  border: 1px solid var(--light-teal);
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: var(--primary-teal);
+  color: var(--white);
+  border-color: var(--primary-teal);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-teal);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-teal);
+}
+
+.portfolio-before-after {
+  display: flex;
+  height: 250px;
+}
+
+
+.portfolio-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-teal);
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Pricing Section */
+.bg-removal-pricing {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.pricing-card {
+  background-color: var(--very-light-teal);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px var(--shadow-teal);
+  flex: 1;
+  max-width: 350px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-teal);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary-teal);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-teal);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 10px;
+}
+
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-teal);
+}
+
+.unit {
+  font-size: 16px;
+  color: var(--text-medium);
+}
+
+.pricing-features {
+  margin-bottom: 30px;
+}
+
+.pricing-features ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-features li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: var(--text-medium);
+  position: relative;
+  padding-left: 25px;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-teal);
+  font-weight: 700;
+}
+
+.pricing-cta {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.pricing-cta:hover {
+  background-color: var(--dark-teal);
+}
+
+.bulk-pricing {
+  background-color: var(--very-light-teal);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px var(--shadow-teal);
+  text-align: center;
+}
+
+.bulk-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 20px;
+}
+
+.bulk-tiers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bulk-tier {
+  background-color: var(--light-teal);
+  border-radius: 8px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+}
+
+.tier-range {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.tier-discount {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-teal);
+}
+
+.bulk-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-teal);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.bulk-cta:hover {
+  background-color: var(--dark-teal);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .bg-removal-hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .services-grid,
+  .benefits-grid,
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .pricing-cards {
+    flex-wrap: wrap;
+  }
+
+  .pricing-card {
+    min-width: 280px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 900px) {
+  .bg-removal-hero .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .process-step,
+  .process-step.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-visual {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-removal-hero {
+    padding: 80px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .demo-container {
+    flex-direction: column;
+  }
+
+  .bulk-tiers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bulk-tier {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .benefit-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio-tabs {
+    gap: 5px;
+  }
+
+  .tab-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-removal-hero {
+    padding: 70px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .service-badge {
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portfolio-before-after {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .portfolio-image {
+    height: 200px;
+  }
+}
+
+/* Fix for Desktop Dropdown Menus */
+
+/* Ensure proper positioning and visibility for dropdowns */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Fix dropdown content positioning and visibility */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid #e5e5e5;
+  min-width: 200px; /* Ensure minimum width */
+}
+
+/* Fix hover state for dropdowns */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+/* Services Dropdown specific fixes */
+.services-dropdown {
+  width: 700px;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  z-index: 1001; /* Higher z-index to ensure it appears above other elements */
+}
+
+/* Fix services dropdown hover state */
+.dropdown:hover .services-dropdown {
+  transform: translateX(-50%) translateY(0);
+  display: block;
+}
+
+/* Fix services grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* Company Dropdown specific fixes */
+.company-dropdown {
+  width: 220px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  left: 0;
+  z-index: 1001; /* Higher z-index to ensure it appears above other elements */
+}
+
+/* Fix for nested dropdowns in mobile menu */
+.mobile-dropdown-content {
+  display: none; /* Start with display none */
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  margin: 0.5rem 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Show dropdown content when active */
+.mobile-dropdown.active .mobile-dropdown-content {
+  display: block; /* Ensure it's displayed when active */
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix for nav-link hover state */
+.nav-link:hover {
+  color: #d87522;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Fix for dropdown button appearance */
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+/* Fix dropdown icon rotation on hover */
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Ensure proper stacking context for all navigation elements */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Fix for service category links */
+.service-category a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+
+.service-category a:hover {
+  color: #d87522;
+  transform: translateX(8px);
+  background-color: #f8fafc;
+  padding-left: 0.5rem;
+}
+
+/* Fix for company dropdown links */
+.company-dropdown a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.company-dropdown a:hover {
+  color: #d87522;
+  background-color: #f0f9ff;
+  transform: translateX(5px);
+}
+
+/* Fix for dropdown menus on smaller screens */
+@media (max-width: 1023px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-dropdown {
+    width: 95vw;
+    padding: 1rem;
+    left: 2.5vw;
+    transform: translateY(-10px);
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .company-dropdown {
+    width: 95vw;
+    left: 2.5vw;
+  }
+}
+img.logo-1 {
+    width: 14pc;
+}
+ </style>
+</head>
+<body>
+
+
+    <!-- Navigation Header -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+   
+    <!-- Logo -->
+  <a href="index.html" class="logo">
+   <img src="ogo.png" alt="" class="logo-1">
+    </a>
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+     <a href="index.html" class="nav-link">HOME</a> 
+
+      <!-- Services Dropdown -->
+      <div class="dropdown">
+        <button class="nav-link dropdown-btn">
+          Services
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </button>
+        <div class="dropdown-content services-dropdown">
+          <div class="services-grid">
+
+            <div class="service-category">
+              <h3>BASIC EDITING</h3>
+              <ul>
+                <li><a href="cliping.html">Clipping Path</a></li>
+                <li><a href="bg.html">Bg Removal</a></li>
+                <li><a href="resize.html">Resizing</a></li>
+                <li><a href="masking.html">Masking</a></li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h3>ADVANCE EDITING</h3>
+              <ul>
+                <li><a href="e.html">E-commerce EDITING</a></li>
+                <li><a href="beauty.html">Beauty Retouching</a></li>
+                <li><a href="jewellery.html">Jewelry Retouching</a></li>
+                <li><a href="real.html">Real-Estate Editing</a></li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h3>IMAGE MANIPULATION</h3>
+              <ul>
+                <li><a href="image.html">Image Masking</a></li>
+                <li><a href="blending.html">Blending</a></li>
+                <li><a href="colour.html">Color Adjustment</a></li>
+                <li><a href="comb.html">Image combination</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+     <a href="pro.html" class="nav-link">Projects</a>
+      <a href="price.html" class="nav-link">Price</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+<div class="cta-section">
+  <a href="free.html">
+    <button class="btn btn-yellow">FREE TRIAL</button>
+  </a>
+</div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-title">Menu</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="mobile-menu-content">
+    <nav class="mobile-nav">
+
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+
+      <!-- Mobile Services Section -->
+      <div class="mobile-dropdown">
+        <button class="mobile-nav-link mobile-dropdown-btn">
+          Services
+          <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+        </button>
+        <div class="mobile-dropdown-content">
+
+          <div class="mobile-service-category">
+            <h4>BASIC EDITING</h4>
+            <ul>
+              <li><a href="cliping.html">Clipping Path</a></li>
+                <li><a href="bg.html">Bg Removal</a></li>
+                <li><a href="resize.html">Resizing</a></li>
+                <li><a href="masking.html">Masking</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-service-category">
+            <h4>ADVANCE EDITING</h4>
+            <ul>
+         <li><a href="e.html">E-commerce EDITING</a></li>
+                <li><a href="beauty.html">Beauty Retouching</a></li>
+                <li><a href="jewellery.html">Jewelry Retouching</a></li>
+                <li><a href="real.html">Real-Estate Editing</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-service-category">
+            <h4>IMAGE MANIPULATION</h4>
+            <ul>
+                <li><a href="image.html">Image Masking</a></li>
+                <li><a href="blending.html">Blending</a></li>
+                <li><a href="colour.html">Color Adjustment</a></li>
+                <li><a href="comb.html">Image combination</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+     <a href="pro.html" class="nav-link">Projects</a>
+      <a href="price.html" class="nav-link">Price</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </nav>
+  </div>
+
+<div class="mobile-menu-footer">
+  <a href="free.html" class="btn btn-yellow mobile-btn">FREE TRIAL</a>
+</div>
+</div>
+
+ <main>
+    <!-- Hero Section -->
+    <section class="bg-removal-hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="service-badge">Photo Editing</span>
+          <h1 class="hero-title">Professional <span class="highlight">Background Removal</span> Services for Perfect Product Images</h1>
+          <p class="hero-description">Remove backgrounds with pixel-perfect precision. Our expert editors use advanced techniques to isolate your products, creating clean, professional images that boost sales and engagement.</p>
+          <div class="hero-cta">
+            <a href="#get-started" class="btn-primary">Get started</a>
+            <a href="#learn-more" class="btn-secondary">See examples</a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="bg-removal-demo">
+            <div class="demo-container">
+              <div class="demo-image-wrapper original">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product with background" class="demo-image">
+                <span class="image-label">Original</span>
+              </div>
+              <div class="demo-arrow">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 20H32" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 8L32 20L20 32" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="demo-image-wrapper result">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product with background removed" class="demo-image">
+                <span class="image-label">Background Removed</span>
+                <div class="transparency-pattern"></div>
+              </div>
+            </div>
+            <div class="demo-caption">
+              <p>Clean, professional background removal that preserves every detail of your product</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="bg-removal-services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Background Removal Services</h2>
+          <p class="section-subtitle">Comprehensive solutions for all your background removal needs</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="15" width="40" height="30" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M20 25L25 30L35 20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 35L15 30L25 40" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Simple Background Removal</h3>
+            <p class="service-description">Perfect for products with clean edges and solid backgrounds. Quick turnaround for straightforward images.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10C35.5228 10 40 14.4772 40 20V40C40 45.5228 35.5228 50 30 50C24.4772 50 20 45.5228 20 40V20C20 14.4772 24.4772 10 30 10Z" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M25 25C25 25 27 22 30 25C33 22 35 25 35 25" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 35C15 35 20 30 30 35C40 30 45 35 45 35" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Complex Hair & Fur Removal</h3>
+            <p class="service-description">Specialized techniques for intricate details like hair, fur, and fine textures that require precision editing.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="15" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M30 20V30L37 37" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 15L20 20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M45 15L40 20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 45L20 40" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M45 45L40 40" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Bulk Background Removal</h3>
+            <p class="service-description">Efficient processing for large volumes of images with consistent quality and fast delivery times.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="20" width="30" height="20" rx="2" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M20 15V20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M30 15V20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M40 15V20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 40V45" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M30 40V45" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M40 40V45" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Transparent Background</h3>
+            <p class="service-description">Create PNG files with transparent backgrounds perfect for web use, catalogs, and marketing materials.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 30C10 30 15 20 30 20C45 20 50 30 50 30C50 30 45 40 30 40C15 40 10 30 10 30Z" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <circle cx="30" cy="30" r="5" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M25 15L30 10L35 15" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">White Background Replacement</h3>
+            <p class="service-description">Replace existing backgrounds with clean white backgrounds perfect for e-commerce and product catalogs.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="40" height="40" rx="5" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+                <path d="M20 25L25 30L35 20" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 40L20 35L30 45" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35 40L40 35L45 40" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Custom Background Replacement</h3>
+            <p class="service-description">Replace backgrounds with custom colors, gradients, or images to match your brand requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+   
+    
+    <!-- Process Section -->
+    <section class="bg-removal-process">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Background Removal Process</h2>
+          <p class="section-subtitle">How we deliver pixel-perfect background removal</p>
+        </div>
+        
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Image Analysis</h3>
+              <p class="step-description">We carefully analyze each image to determine the best removal technique based on complexity, edges, and background type.</p>
+            </div>
+            <div class="step-visual">
+              <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image analysis process" class="step-image">
+            </div>
+          </div>
+          
+          <div class="process-step reverse">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Precision Cutting</h3>
+              <p class="step-description">Using advanced tools and techniques, we create precise selections around your product, preserving every detail and edge.</p>
+            </div>
+            <div class="step-visual">
+              <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Precision cutting process" class="step-image">
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Edge Refinement</h3>
+              <p class="step-description">We refine edges to ensure smooth, natural-looking results without halos or rough edges around your product.</p>
+            </div>
+            <div class="step-visual">
+              <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Edge refinement process" class="step-image">
+            </div>
+          </div>
+          
+          <div class="process-step reverse">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Quality Control</h3>
+              <p class="step-description">Every image undergoes thorough quality control to ensure perfect results before delivery to you.</p>
+            </div>
+            <div class="step-visual">
+              <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Quality control process" class="step-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="bg-removal-portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Background Removal Portfolio</h2>
+          <p class="section-subtitle">See the quality of our background removal work</p>
+        </div>
+        
+        <div class="portfolio-tabs">
+          <button class="tab-button active" data-category="all">All Categories</button>
+          <button class="tab-button" data-category="fashion">Fashion</button>
+          <button class="tab-button" data-category="electronics">Electronics</button>
+          <button class="tab-button" data-category="jewelry">Jewelry</button>
+          <button class="tab-button" data-category="furniture">Furniture</button>
+        </div>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="fashion">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion item before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion item after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Fashion Apparel</h3>
+          </div>
+          
+          <div class="portfolio-item" data-category="electronics">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Electronics before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Electronics after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Electronics</h3>
+          </div>
+          
+          <div class="portfolio-item" data-category="jewelry">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jewelry before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jewelry after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Jewelry</h3>
+          </div>
+          
+          <div class="portfolio-item" data-category="furniture">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Furniture before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Furniture after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Furniture</h3>
+          </div>
+          
+          <div class="portfolio-item" data-category="fashion">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Footwear</h3>
+          </div>
+          
+          <div class="portfolio-item" data-category="electronics">
+            <div class="portfolio-before-after">
+              <div class="portfolio-image before">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gadgets before background removal" class="portfolio-img">
+                <span class="image-overlay">Before</span>
+              </div>
+              <div class="portfolio-image after">
+                <img src="https://images.unsplash.com/photo-1748615745999-d40c4ccc28b8?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gadgets after background removal" class="portfolio-img">
+                <span class="image-overlay">After</span>
+              </div>
+            </div>
+            <h3 class="portfolio-title">Gadgets</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="bg-removal-pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Background Removal Pricing</h2>
+          <p class="section-subtitle">Transparent pricing for all your background removal needs</p>
+        </div>
+        
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Basic</h3>
+              <div class="pricing-amount">
+                <span class="price">$0.49</span>
+                <span class="unit">per image</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Simple products with clean edges</li>
+                <li>Solid or simple backgrounds</li>
+                <li>24-hour turnaround</li>
+                <li>JPG and PNG formats</li>
+                <li>2 revision rounds</li>
+              </ul>
+            </div>
+            <a href="#order-basic" class="pricing-cta">Choose Basic</a>
+          </div>
+          
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Standard</h3>
+              <div class="pricing-amount">
+                <span class="price">$0.99</span>
+                <span class="unit">per image</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Medium complexity products</li>
+                <li>Complex backgrounds</li>
+                <li>12-hour turnaround</li>
+                <li>All file formats including PSD</li>
+                <li>Unlimited revisions</li>
+                <li>Basic color correction</li>
+              </ul>
+            </div>
+            <a href="#order-standard" class="pricing-cta">Choose Standard</a>
+          </div>
+          
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Premium</h3>
+              <div class="pricing-amount">
+                <span class="price">$1.99</span>
+                <span class="unit">per image</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Complex products (hair, fur, intricate details)</li>
+                <li>Any background complexity</li>
+                <li>6-hour express turnaround</li>
+                <li>All formats with layered PSD</li>
+                <li>Unlimited revisions</li>
+                <li>Advanced retouching included</li>
+                <li>Dedicated account manager</li>
+              </ul>
+            </div>
+            <a href="#order-premium" class="pricing-cta">Choose Premium</a>
+          </div>
+        </div>
+        
+        <div class="bulk-pricing">
+          <h3 class="bulk-title">Volume Discounts Available</h3>
+          <div class="bulk-tiers">
+            <div class="bulk-tier">
+              <span class="tier-range">50-99 images</span>
+              <span class="tier-discount">10% off</span>
+            </div>
+            <div class="bulk-tier">
+              <span class="tier-range">100-499 images</span>
+              <span class="tier-discount">15% off</span>
+            </div>
+            <div class="bulk-tier">
+              <span class="tier-range">500-999 images</span>
+              <span class="tier-discount">20% off</span>
+            </div>
+            <div class="bulk-tier">
+              <span class="tier-range">1000+ images</span>
+              <span class="tier-discount">25% off</span>
+            </div>
+          </div>
+          <a href="#bulk-quote" class="bulk-cta">Get Bulk Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+   
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">About us</h3>
+        <div class="footer-divider"></div>
+        <p class="footer-text">
+Edity is a Professional Photo Editing Company in Bangladesh with more than 150 Photoshop professionals. We have 5+ years of experience in photo editing services. We have become one of the fastest-growing photo editing service providers since 2025. 
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">100% Satisfaction</h3>
+        <div class="footer-divider"></div>
+        <div class="badge-container">
+          <div class="satisfaction-badge">
+            <div class="badge-inner">
+              <span class="badge-text">100%</span>
+              <span class="badge-subtext">SATISFACTION GUARANTEED</span>
+            </div>
+          </div>
+          <div class="dmca-badge">
+            <span class="dmca-text">PROTECTED BY</span>
+            <span class="dmca-logo">DMCA</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Important Links</h3>
+        <div class="footer-divider"></div>
+        <ul class="footer-links">
+             <li><a href="about.html">About us</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="">Data Security Policy</a></li>
+          <li><a href="">Sitemap</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Contact us</h3>
+        <div class="footer-divider"></div>
+        <div class="contact-info">
+          <p>Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh</p>
+          <p>Email: <a href="mailto:info@zenithclipping.com">info@brightimageglobal.com</a></p>
+          <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright ©  2025 All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Simple Responsive Menu - Perfect for Client Projects
+document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
+
+  // DOM Elements
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+  const mobileMenuClose = document.querySelector('.mobile-menu-close');
+  const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+  const body = document.body;
+
+  // State
+  let isMobileMenuOpen = false;
+
+  // Mobile Menu Toggle
+  function toggleMobileMenu() {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    if (isMobileMenuOpen) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
+  }
+
+  // Open Mobile Menu
+  function openMobileMenu() {
+    mobileMenu.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+    mobileMenuBtn.classList.add('active');
+    body.style.overflow = 'hidden';
+    isMobileMenuOpen = true;
+  }
+
+  // Close Mobile Menu
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    mobileMenuBtn.classList.remove('active');
+    body.style.overflow = '';
+    isMobileMenuOpen = false;
+
+    // Close all mobile dropdowns
+    document.querySelectorAll('.mobile-dropdown.active').forEach(dropdown => {
+      dropdown.classList.remove('active');
+    });
+  }
+
+  // Mobile Dropdown Toggle
+  function toggleMobileDropdown(dropdown) {
+    const isActive = dropdown.classList.contains('active');
+
+    // Close all other dropdowns
+    document.querySelectorAll('.mobile-dropdown.active').forEach(otherDropdown => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove('active');
+      }
+    });
+
+    // Toggle current dropdown
+    if (isActive) {
+      dropdown.classList.remove('active');
+    } else {
+      dropdown.classList.add('active');
+    }
+  }
+
+  // Event Listeners
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+  }
+
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+  }
+
+  // Mobile dropdown event listeners
+  mobileDropdownBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdown = btn.closest(".mobile-dropdown");
+      const dropdownContent = dropdown.querySelector(".mobile-dropdown-content");
+      const menuContent = document.querySelector(".mobile-menu-content");
+
+      // Toggle this dropdown only
+      const isActive = dropdown.classList.contains("active");
+      closeAllDropdowns(); // Close all first
+
+      if (!isActive) {
+        dropdown.classList.add("active");
+
+        // Wait for the dropdown to expand, then scroll
+        setTimeout(() => {
+          // Get the position of the dropdown button relative to the menu content
+          const btnRect = btn.getBoundingClientRect();
+          const menuRect = menuContent.getBoundingClientRect();
+          const dropdownHeight = dropdownContent.scrollHeight;
+
+          // Calculate if dropdown extends beyond visible area
+          const dropdownBottom = btnRect.bottom - menuRect.top + dropdownHeight;
+          const menuHeight = menuContent.clientHeight;
+
+          if (dropdownBottom > menuHeight) {
+            // Scroll the menu content to show the dropdown
+            const scrollTop = menuContent.scrollTop;
+            const targetScroll = scrollTop + (dropdownBottom - menuHeight) + 20; // 20px padding
+            menuContent.scrollTo({ top: targetScroll, behavior: "smooth" });
+          }
+        }, 150); // Wait for CSS transition to start
+      }
+    });
+  });
+
+  // Helper: Close all dropdowns
+  function closeAllDropdowns() {
+    document.querySelectorAll(".mobile-dropdown.active").forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+
+  // Close mobile menu on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && isMobileMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close mobile menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMobileMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Prevent body scroll when mobile menu is open
+  function preventBodyScroll(e) {
+    if (isMobileMenuOpen && !mobileMenu.contains(e.target)) {
+      e.preventDefault();
+    }
+  }
+
+  // Add touch event listeners for better mobile experience
+  document.addEventListener('touchmove', preventBodyScroll, { passive: false });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    // Close desktop dropdowns if clicking outside
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+
+    // Close mobile dropdowns when clicking outside mobile menu
+    if (!e.target.closest('.mobile-menu') && !e.target.closest('.mobile-menu-btn')) {
+      if (isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Close mobile menu if open
+        if (isMobileMenuOpen) {
+          closeMobileMenu();
+        }
+      }
+    });
+  });
+
+  // Add loading state for buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Add your button click logic here
+      console.log('Button clicked:', this.textContent);
+    });
+  });
+
+  // Improve scrolling within dropdown content areas
+  document.querySelectorAll(".mobile-dropdown-content").forEach(content => {
+    // Enable smooth scrolling for dropdown content
+    content.style.scrollBehavior = "smooth";
+    // Add touch scroll momentum for iOS
+    content.style.webkitOverflowScrolling = "touch";
+  });
+
+  // Ensure mobile menu content is scrollable
+  const mobileMenuContent = document.querySelector(".mobile-menu-content");
+  if (mobileMenuContent) {
+    mobileMenuContent.style.scrollBehavior = "smooth";
+    mobileMenuContent.style.webkitOverflowScrolling = "touch";
+  }
+
+  // Initialize
+  console.log('✅ Simple Responsive Menu initialized successfully!');
+});
+
+
+
+
+
+
+// Background Removal Page Animations
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize GSAP
+  if (typeof gsap === "undefined") {
+    console.error("GSAP is not defined. Ensure it is loaded before this script.")
+    return
+  }
+
+  // Register ScrollTrigger plugin
+  if (typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger)
+  }
+
+  // Hero Section Animations
+  const heroTl = gsap.timeline()
+
+  // Demo Images Animation
+  gsap.from(".demo-image-wrapper", {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out",
+    delay: 0.5,
+  })
+
+  gsap.from(".demo-arrow", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.6,
+    ease: "back.out(1.7)",
+    delay: 1.1,
+  })
+
+ 
+
+  // Benefits Section Animations
+  gsap.from(".benefit-card", {
+    scrollTrigger: {
+      trigger: ".bg-removal-benefits",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "power3.out",
+  })
+
+  // Process Section Animations
+  gsap.from(".process-step", {
+    scrollTrigger: {
+      trigger: ".bg-removal-process",
+      start: "top 80%",
+    },
+    x: (index) => (index % 2 === 0 ? -50 : 50),
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out",
+  })
+
+  // Portfolio Section Animations
+  gsap.from(".portfolio-tabs", {
+    scrollTrigger: {
+      trigger: ".bg-removal-portfolio",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.out",
+  })
+
+
+
+  // Pricing Section Animations
+
+  gsap.from(".bulk-pricing", {
+    scrollTrigger: {
+      trigger: ".bulk-pricing",
+      start: "top 90%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  })
+
+  // Portfolio Tab Functionality
+  const tabButtons = document.querySelectorAll(".tab-button")
+  const portfolioItems = document.querySelectorAll(".portfolio-item")
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category")
+
+      // Update active tab
+      tabButtons.forEach((btn) => btn.classList.remove("active"))
+      button.classList.add("active")
+
+      // Filter portfolio items
+      portfolioItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+
+        if (category === "all" || itemCategory === category) {
+          gsap.to(item, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          })
+          item.style.display = "block"
+        } else {
+          gsap.to(item, {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.3,
+            ease: "power2.out",
+            onComplete: () => {
+              item.style.display = "none"
+            },
+          })
+        }
+      })
+    })
+  })
+
+  // Hover animations for service cards
+  const serviceCards = document.querySelectorAll(".service-card")
+
+  serviceCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        y: -5,
+        boxShadow: "0 10px 25px rgba(45, 212, 191, 0.3)",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    })
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        y: 0,
+        boxShadow: "0 0 0 rgba(45, 212, 191, 0)",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    })
+  })
+
+  // Hover animations for benefit cards
+  const benefitCards = document.querySelectorAll(".benefit-card")
+
+  benefitCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        y: -5,
+        boxShadow: "0 10px 25px rgba(45, 212, 191, 0.3)",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    })
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        y: 0,
+        boxShadow: "0 0 0 rgba(45, 212, 191, 0)",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    })
+  })
+
+  // Hover animations for portfolio items
+  const portfolioItemsHover = document.querySelectorAll(".portfolio-item")
+
+  portfolioItemsHover.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      gsap.to(item.querySelectorAll(".portfolio-img"), {
+        scale: 1.05,
+        duration: 0.5,
+        ease: "power2.out",
+      })
+    })
+
+    item.addEventListener("mouseleave", () => {
+      gsap.to(item.querySelectorAll(".portfolio-img"), {
+        scale: 1,
+        duration: 0.5,
+        ease: "power2.out",
+      })
+    })
+  })
+})
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,2816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Image Global - Professional Image Editing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #d87522;
+  --primary-hover: #c66a1f;
+  --text-color: #333;
+  --text-light: #666;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 0.375rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background-color: #fff;
+}
+
+/* Base Styles */
+:root {
+  --primary-color: #d87522;
+  --primary-hover: #c66a1f;
+  --secondary-color: #d87522;
+  --dark-color: #1d3557;
+  --light-color: #f1faee;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+  --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+  --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(165, 151, 151, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #d87522;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d87522;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d87522;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d87522;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Fix for Desktop Dropdown Menus */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid #e5e5e5;
+  min-width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+/* Services Dropdown specific fixes */
+.services-dropdown {
+  width: 700px;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  z-index: 1001;
+}
+
+.dropdown:hover .services-dropdown {
+  transform: translateX(-50%) translateY(0);
+  display: block;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* Company Dropdown specific fixes */
+.company-dropdown {
+  width: 220px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  left: 0;
+  z-index: 1001;
+}
+
+/* Fix for nested dropdowns in mobile menu */
+.mobile-dropdown-content {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  margin: 0.5rem 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+  display: block;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link:hover {
+  color: #d87522;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.service-category a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+
+.service-category a:hover {
+  color: #d87522;
+  transform: translateX(8px);
+  background-color: #f8fafc;
+  padding-left: 0.5rem;
+}
+
+.company-dropdown a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.company-dropdown a:hover {
+  color: #d87522;
+  background-color: #f0f9ff;
+  transform: translateX(5px);
+}
+
+@media (max-width: 1023px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-dropdown {
+    width: 95vw;
+    padding: 1rem;
+    left: 2.5vw;
+    transform: translateY(-10px);
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .company-dropdown {
+    width: 95vw;
+    left: 2.5vw;
+  }
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid #e5e5e5;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Services Dropdown */
+.services-dropdown {
+  width: 700px;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.dropdown:hover .services-dropdown {
+  transform: translateX(-50%) translateY(0);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.service-category h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d87522;
+  padding-bottom: 0.5rem;
+}
+
+.service-category ul {
+  list-style: none;
+}
+
+.service-category li {
+  margin-bottom: 0.75rem;
+}
+
+.service-category a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+
+.service-category a:hover {
+  color: #d87522;
+  transform: translateX(8px);
+  background-color: #f8fafc;
+  padding-left: 0.5rem;
+}
+
+/* Company Dropdown */
+.company-dropdown {
+  width: 220px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  left: 0;
+}
+
+.company-dropdown a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.company-dropdown a:hover {
+  color: #d87522;
+  background-color: #f0f9ff;
+  transform: translateX(5px);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-yellow {
+  background-color: #0622fb;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow:hover {
+  background-color: #d87522;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+@media screen and (max-width: 576px) {
+    button.btn.btn-yellow {
+        display: none !important;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 4px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #4b5563;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1998;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 350px;
+  height: 100vh;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8fafc;
+}
+
+.mobile-menu-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  background-color: #f3f4f6;
+  color: #d87522;
+}
+
+.mobile-menu-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+}
+
+.mobile-nav-link:hover {
+  color: #d87522;
+  background-color: #f3f4f6;
+  padding-left: 1.5rem;
+}
+
+/* ===== MOBILE MENU CONTENT - PREMIUM STYLING ===== */
+.mobile-menu-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 140px);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* ===== MOBILE DROPDOWN CONTENT - FIXED & PREMIUM ===== */
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    margin: 0.5rem 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MOBILE DROPDOWN LINKS - PREMIUM STYLING ===== */
+.mobile-dropdown-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+}
+
+.mobile-dropdown-link:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.mobile-dropdown-link:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.mobile-dropdown-link:hover,
+.mobile-dropdown-link:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    transform: translateX(8px);
+    padding-left: 2rem;
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+.mobile-dropdown-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(135deg, #d87522 0%, #c66a1f 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 3px 3px 0;
+}
+
+.mobile-dropdown-link:hover::before,
+.mobile-dropdown-link:focus::before {
+    transform: scaleY(1);
+}
+
+/* ===== SERVICE CATEGORIES - PREMIUM STYLING ===== */
+.mobile-service-category {
+    padding: 1.5rem 1rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.mobile-service-category:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.mobile-service-category:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.mobile-service-category h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d87522;
+    position: relative;
+    background: linear-gradient(135deg, #d87522 0%, #c66a1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mobile-service-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-service-category li {
+    margin-bottom: 0.5rem;
+}
+
+.mobile-service-category a {
+    display: block;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+}
+
+.mobile-service-category a:hover,
+.mobile-service-category a:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    transform: translateX(8px);
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+/* ===== COMPANY LINKS - PREMIUM STYLING ===== */
+.mobile-company-links {
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-company-links a {
+    display: block;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.mobile-company-links a:hover,
+.mobile-company-links a:focus {
+    color: #d87522;
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    transform: translateX(8px);
+    border-color: rgba(216, 117, 34, 0.2);
+    box-shadow: 0 2px 8px rgba(216, 117, 34, 0.15);
+}
+
+/* Footer styles with red theme */
+.footer {
+  background-color: #2b2b3d; /* Dark background like in the image */
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  color: #d87522; /* Red color for titles */
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #d87522; /* Red divider */
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #d87522; /* Red background on hover */
+  transform: translateY(-3px);
+}
+
+/* Satisfaction badge */
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: -100px;
+}
+
+.satisfaction-badge {
+  width: 120px;
+  height: 120px;
+  background-color: #d87522;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-inner {
+  width: 100px;
+  height: 100px;
+  background-color: #d87522;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.badge-text {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.badge-subtext {
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+.dmca-badge {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dmca-text {
+  display: block;
+  font-size: 10px;
+  color: #666;
+}
+
+.dmca-logo {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d87522;
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #d87522;
+  transform: translateX(5px);
+}
+
+/* Contact info */
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #d87522;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Payment methods */
+.payment-methods {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.payment-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  background-color: #222233;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #d87522 0%, #e68a3a 50%, #c66a1f 100%);
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fed7aa;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: white;
+  color: #d87522;
+}
+
+.btn-primary:hover {
+  background: #fed7aa;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #d87522;
+  transform: translateY(-2px);
+}
+
+.comparison-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.comparison-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.comparison-item:hover {
+  transform: scale(1.05);
+}
+
+.comparison-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.comparison-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.before {
+  background: rgba(216, 117, 34, 0.9);
+}
+
+.after {
+  background: rgba(34, 139, 34, 0.9);
+}
+
+.comparison-arrow {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Services Section */
+.services {
+  padding: 100px 0;
+  background: #f8f9fa;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #d87522;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #d87522;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(216, 117, 34, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #d87522;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #fed7aa 0%, #fff7ed 100%);
+}
+
+.benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.benefits h2 {
+  font-size: 2.5rem;
+  color: #d87522;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.benefits-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #d87522, #c66a1f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex-shrink: 0;
+}
+
+.benefit-content h3 {
+  color: #d87522;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.benefit-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.benefits-image {
+  position: relative;
+}
+
+.benefits-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Process Section */
+.process {
+  padding: 100px 0;
+  background: white;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #d87522, #c66a1f);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(216, 117, 34, 0.3);
+}
+
+.step-content h3 {
+  font-size: 1.4rem;
+  color: #d87522;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.step-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 100px 0;
+  background: #f8f9fa;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.portfolio-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(216, 117, 34, 0.2);
+}
+
+.portfolio-comparison {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.before-image,
+.after-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.after-image {
+  opacity: 0;
+}
+
+.portfolio-comparison:hover .after-image {
+  opacity: 1;
+}
+
+.portfolio-comparison:hover .before-image {
+  opacity: 0;
+}
+
+.portfolio-item h3 {
+  padding: 20px 25px 10px;
+  color: #d87522;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.portfolio-item p {
+  padding: 0 25px 25px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #d87522 0%, #e68a3a 50%, #c66a1f 100%);
+  color: white;
+}
+
+.pricing .section-header h2,
+.pricing .section-header p {
+  color: white;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.pricing-card {
+  background: white;
+  color: #333;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card.featured {
+  border-color: #d87522;
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d87522;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pricing-header h3 {
+  font-size: 1.8rem;
+  color: #d87522;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 3rem;
+  color: #d87522;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.price-period {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.pricing-features {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.feature {
+  padding: 8px 0;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.feature:last-child {
+  border-bottom: none;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #d87522, #c66a1f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+  background: linear-gradient(135deg, #c66a1f, #b55e1c);
+  transform: translateY(-2px);
+}
+
+.bulk-pricing {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bulk-pricing h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fed7aa;
+}
+
+.bulk-pricing p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 25 95% 53%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 25 95% 53%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d87522;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c66a1f;
+}
+
+/* Smooth animations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradient backgrounds */
+.gradient-orange {
+  background: linear-gradient(135deg, #d87522 0%, #e68a3a 100%);
+}
+
+.gradient-orange-light {
+  background: linear-gradient(135deg, #fed7aa 0%, #fff7ed 100%);
+}
+
+/* Custom button hover effects */
+.btn-hover-lift {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image overlay effects */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(216, 117, 34, 0.1), rgba(198, 106, 31, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-overlay:hover::after {
+  opacity: 1;
+}
+
+/* Text gradient effects */
+.text-gradient {
+  background: linear-gradient(135deg, #d87522 0%, #c66a1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Focus states for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #d87522;
+  outline-offset: 2px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Custom dropdown styles */
+[data-radix-popper-content-wrapper] {
+  z-index: 50 !important;
+}
+
+/* Ensure dropdown content is properly positioned */
+.dropdown-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+/* Custom scrollbar for mobile dropdowns */
+.mobile-dropdown-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-dropdown-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+
+.mobile-dropdown-scroll::-webkit-scrollbar-thumb {
+  background: #d87522;
+  border-radius: 2px;
+}
+
+.mobile-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c66a1f;
+}
+
+/* Fix for dropdown menu positioning */
+[data-state="open"] > [data-radix-popper-content-wrapper] {
+  z-index: 50;
+}
+
+/* Ensure proper grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  min-height: 200px;
+}
+
+/* Mobile responsive grid */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Smooth transitions */
+.dropdown-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-item:hover {
+  transform: translateX(4px);
+}
+
+/* Fix for mobile sheet content */
+.mobile-sheet-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Category title styling */
+.category-title {
+  position: relative;
+  display: inline-block;
+}
+
+.category-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d87522, #c66a1f);
+  border-radius: 1px;
+}
+
+/* Hover effects for service links */
+.service-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(216, 117, 34, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-link:hover::before {
+  left: 100%;
+}
+
+/* Mobile menu animations */
+.mobile-menu-enter {
+  transform: translateX(100%);
+}
+
+.mobile-menu-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.mobile-menu-exit {
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Backdrop blur effect */
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Focus states for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #d87522;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Ensure proper z-index stacking */
+.navigation-header {
+  z-index: 1000;
+}
+
+.dropdown-overlay {
+  z-index: 999;
+}
+
+.mobile-menu-overlay {
+  z-index: 1001;
+}
+
+.mobile-menu-content {
+  z-index: 1002;
+}
+
+img.logo-1 {
+    width: 14pc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .comparison-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .comparison-arrow {
+    transform: rotate(90deg);
+  }
+
+  .benefits-content {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .services,
+  .benefits,
+  .process,
+  .portfolio,
+  .pricing {
+    padding: 60px 0;
+  }
+}
+
+ </style>
+</head>
+<body>
+
+
+    <!-- Navigation Header -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+  
+   <a href="index.html" class="logo">
+   <img src="ogo.png" alt="" class="logo-1">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+<a href="index.html" class="nav-link">HOME</a> 
+
+      <!-- Services Dropdown -->
+      <div class="dropdown">
+        <button class="nav-link dropdown-btn">
+          Services
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </button>
+        <div class="dropdown-content services-dropdown">
+          <div class="services-grid">
+
+            <div class="service-category">
+              <h3>BASIC EDITING</h3>
+              <ul>
+                <li><a href="cliping.html">Clipping Path</a></li>
+                <li><a href="bg.html">Bg Removal</a></li>
+                <li><a href="resize.html">Resizing</a></li>
+                <li><a href="masking.html">Masking</a></li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h3>ADVANCE EDITING</h3>
+              <ul>
+                <li><a href="e.html">E-commerce EDITING</a></li>
+                <li><a href="beauty.html">Beauty Retouching</a></li>
+                <li><a href="jewellery.html">Jewelry Retouching</a></li>
+                <li><a href="real.html">Real-Estate Editing</a></li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h3>IMAGE MANIPULATION</h3>
+              <ul>
+                <li><a href="image.html">Image Masking</a></li>
+                <li><a href="blending.html">Blending</a></li>
+                <li><a href="colour.html">Color Adjustment</a></li>
+                <li><a href="comb.html">Image combination</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+     <a href="pro.html" class="nav-link">Projects</a>
+      <a href="price.html" class="nav-link">Price</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Free Trial Button -->
+<div class="cta-section">
+  <a href="free.html">
+    <button class="btn btn-yellow">FREE TRIAL</button>
+  </a>
+</div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-title">Menu</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="mobile-menu-content">
+    <nav class="mobile-nav">
+
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+
+      <!-- Mobile Services Section -->
+      <div class="mobile-dropdown">
+        <button class="mobile-nav-link mobile-dropdown-btn">
+          Services
+          <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+        </button>
+        <div class="mobile-dropdown-content">
+
+          <div class="mobile-service-category">
+            <h4>BASIC EDITING</h4>
+            <ul>
+              <li><a href="cliping.html">Clipping Path</a></li>
+                <li><a href="bg.html">Bg Removal</a></li>
+                <li><a href="resize.html">Resizing</a></li>
+                <li><a href="masking.html">Masking</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-service-category">
+            <h4>ADVANCE EDITING</h4>
+            <ul>
+         <li><a href="e.html">E-commerce EDITING</a></li>
+                <li><a href="beauty.html">Beauty Retouching</a></li>
+                <li><a href="jewellery.html">Jewelry Retouching</a></li>
+                <li><a href="real.html">Real-Estate Editing</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-service-category">
+            <h4>IMAGE MANIPULATION</h4>
+            <ul>
+                <li><a href="image.html">Image Masking</a></li>
+                <li><a href="blending.html">Blending</a></li>
+                <li><a href="colour.html">Color Adjustment</a></li>
+                <li><a href="comb.html">Image combination</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+     <a href="pro.html" class="nav-link">Projects</a>
+      <a href="price.html" class="nav-link">Price</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </nav>
+  </div>
+
+<div class="mobile-menu-footer">
+  <a href="free.html" class="btn btn-yellow mobile-btn">FREE TRIAL</a>
+</div>
+</div>
+
+
+
+      <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">Jewellery Enhancement</div>
+                    <h1>Professional Jewellery Retouching Services</h1>
+                    <p>Transform your jewellery photography with expert retouching. Enhance sparkle, perfect reflections, and create stunning visuals that showcase the true beauty of your precious pieces.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Delivery</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15K+</span>
+                            <span class="stat-label">Enhanced Pieces</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Start Your Project</button>
+                        <button class="btn-secondary">View Portfolio</button>
+                    </div>
+                </div>
+                <div class="hero-demo">
+                    <div class="comparison-container">
+                        <div class="comparison-item">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&crop=center" alt="Before Jewellery Retouching" class="comparison-image">
+                            <div class="comparison-label before">Before</div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop&crop=center" alt="After Jewellery Retouching" class="comparison-image">
+                            <div class="comparison-label after">After</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Specialized Jewellery Retouching Services</h2>
+                <p>Expert enhancement techniques for every type of jewellery piece</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3>Diamond Enhancement</h3>
+                    <p>Maximize sparkle and brilliance with advanced diamond retouching techniques that highlight every facet.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Metal Polishing</h3>
+                    <p>Perfect reflections and mirror-like finishes for gold, silver, platinum, and other precious metals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Detail Enhancement</h3>
+                    <p>Sharpen intricate details, engravings, and textures to showcase craftsmanship and quality.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌈</div>
+                    <h3>Gemstone Perfection</h3>
+                    <p>Enhance color saturation and clarity of rubies, emeralds, sapphires, and other precious stones.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Color Correction</h3>
+                    <p>Perfect color balance and tone to accurately represent your jewellery's true colors.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Flaw Removal</h3>
+                    <p>Remove dust, scratches, fingerprints, and imperfections for flawless presentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Why Choose Professional Jewellery Retouching?</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📈</div>
+                            <div class="benefit-content">
+                                <h3>Increased Sales</h3>
+                                <p>Up to 80% higher conversion rates with professionally retouched jewellery images</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👑</div>
+                            <div class="benefit-content">
+                                <h3>Luxury Appeal</h3>
+                                <p>Create premium brand image with magazine-quality jewellery photography</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚡</div>
+                            <div class="benefit-content">
+                                <h3>Quick Turnaround</h3>
+                                <p>Fast delivery without compromising on quality or attention to detail</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-content">
+                                <h3>Precision Work</h3>
+                                <p>Meticulous attention to every detail, reflection, and sparkle</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏆</div>
+                            <div class="benefit-content">
+                                <h3>Expert Quality</h3>
+                                <p>Professional jewellery photographers and retouchers with years of experience</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-content">
+                                <h3>Cost Effective</h3>
+                                <p>Professional results at competitive prices with bulk discounts available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-image">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=600&fit=crop&crop=center" alt="Jewellery Retouching Benefits">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Jewellery Retouching Process</h2>
+                <p>Professional workflow ensuring perfect results every time</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Jewellery Analysis</h3>
+                        <p>Detailed assessment of metal types, gemstones, and lighting conditions</p>
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop&crop=center" alt="Jewellery Analysis">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Expert Retouching</h3>
+                        <p>Professional enhancement using specialized jewellery retouching techniques</p>
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=300&h=200&fit=crop&crop=center" alt="Expert Retouching">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Sparkle Enhancement</h3>
+                        <p>Perfect reflections, sparkle, and brilliance for maximum visual impact</p>
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=200&fit=crop&crop=center" alt="Sparkle Enhancement">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Quality Assurance</h3>
+                        <p>Final review ensuring every detail meets luxury jewellery standards</p>
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=200&fit=crop&crop=center" alt="Quality Assurance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jewellery Retouching Portfolio</h2>
+                <p>See the transformation of various jewellery pieces</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop&crop=center" alt="Diamond Ring Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=300&fit=crop&crop=center" alt="Diamond Ring After" class="after-image">
+                    </div>
+                    <h3>Diamond Ring Enhancement</h3>
+                    <p>Sparkle enhancement and metal polishing</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=300&h=300&fit=crop&crop=center" alt="Gold Necklace Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop&crop=center" alt="Gold Necklace After" class="after-image">
+                    </div>
+                    <h3>Gold Necklace Perfection</h3>
+                    <p>Metal polishing and detail enhancement</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=300&h=300&fit=crop&crop=center" alt="Gemstone Earrings Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=300&fit=crop&crop=center" alt="Gemstone Earrings After" class="after-image">
+                    </div>
+                    <h3>Gemstone Earrings</h3>
+                    <p>Color enhancement and sparkle optimization</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop&crop=center" alt="Luxury Watch Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=300&h=300&fit=crop&crop=center" alt="Luxury Watch After" class="after-image">
+                    </div>
+                    <h3>Luxury Watch Polish</h3>
+                    <p>Reflection perfection and detail sharpening</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=300&h=300&fit=crop&crop=center" alt="Silver Bracelet Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=300&h=300&fit=crop&crop=center" alt="Silver Bracelet After" class="after-image">
+                    </div>
+                    <h3>Silver Bracelet Shine</h3>
+                    <p>Flaw removal and surface enhancement</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-comparison">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop&crop=center" alt="Complete Set Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=300&fit=crop&crop=center" alt="Complete Set After" class="after-image">
+                    </div>
+                    <h3>Complete Jewellery Set</h3>
+                    <p>Full transformation with consistent styling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jewellery Retouching Pricing</h2>
+                <p>Professional quality at competitive prices</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic Jewellery</h3>
+                        <div class="price">$35</div>
+                        <div class="price-period">per image</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">✓ Basic sparkle enhancement</div>
+                        <div class="feature">✓ Dust and fingerprint removal</div>
+                        <div class="feature">✓ Basic color correction</div>
+                        <div class="feature">✓ 48h delivery</div>
+                        <div class="feature">✓ High-resolution output</div>
+                    </div>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">$75</div>
+                        <div class="price-period">per image</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">✓ Advanced sparkle enhancement</div>
+                        <div class="feature">✓ Metal polishing and reflections</div>
+                        <div class="feature">✓ Gemstone color enhancement</div>
+                        <div class="feature">✓ Detail sharpening</div>
+                        <div class="feature">✓ 24h delivery</div>
+                        <div class="feature">✓ Unlimited revisions</div>
+                    </div>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">$150</div>
+                        <div class="price-period">per image</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">✓ Complete transformation</div>
+                        <div class="feature">✓ Advanced reflection work</div>
+                        <div class="feature">✓ Custom background creation</div>
+                        <div class="feature">✓ Multiple angle consistency</div>
+                        <div class="feature">✓ 12h delivery</div>
+                        <div class="feature">✓ Dedicated project manager</div>
+                    </div>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+            </div>
+            <div class="bulk-pricing">
+                <h3>Bulk Pricing Available</h3>
+                <p>Save up to 50% on orders of 25+ images. Perfect for jewellery catalogs and collections.</p>
+            </div>
+        </div>
+    </section>
+
+
+   
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">About us</h3>
+        <div class="footer-divider"></div>
+        <p class="footer-text">
+Edity is a Professional Photo Editing Company in Bangladesh with more than 150 Photoshop professionals. We have 5+ years of experience in photo editing services. We have become one of the fastest-growing photo editing service providers since 2025. 
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">100% Satisfaction</h3>
+        <div class="footer-divider"></div>
+        <div class="badge-container">
+          <div class="satisfaction-badge">
+            <div class="badge-inner">
+              <span class="badge-text">100%</span>
+              <span class="badge-subtext">SATISFACTION GUARANTEED</span>
+            </div>
+          </div>
+          <div class="dmca-badge">
+            <span class="dmca-text">PROTECTED BY</span>
+            <span class="dmca-logo">DMCA</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Important Links</h3>
+        <div class="footer-divider"></div>
+        <ul class="footer-links">
+       <li><a href="about.html">About us</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="">Data Security Policy</a></li>
+          <li><a href="">Sitemap</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Contact us</h3>
+        <div class="footer-divider"></div>
+        <div class="contact-info">
+          <p>Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh</p>
+          <p>Email: <a href="mailto:info@zenithclipping.com">info@brightimageglobal.com</a></p>
+          <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright ©  2025 All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Simple Responsive Menu - Perfect for Client Projects
+document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
+
+  // DOM Elements
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+  const mobileMenuClose = document.querySelector('.mobile-menu-close');
+  const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+  const body = document.body;
+
+  // State
+  let isMobileMenuOpen = false;
+
+  // Mobile Menu Toggle
+  function toggleMobileMenu() {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    if (isMobileMenuOpen) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
+  }
+
+  // Open Mobile Menu
+  function openMobileMenu() {
+    mobileMenu.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+    mobileMenuBtn.classList.add('active');
+    body.style.overflow = 'hidden';
+    isMobileMenuOpen = true;
+  }
+
+  // Close Mobile Menu
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    mobileMenuBtn.classList.remove('active');
+    body.style.overflow = '';
+    isMobileMenuOpen = false;
+
+    // Close all mobile dropdowns
+    document.querySelectorAll('.mobile-dropdown.active').forEach(dropdown => {
+      dropdown.classList.remove('active');
+    });
+  }
+
+  // Mobile Dropdown Toggle
+  function toggleMobileDropdown(dropdown) {
+    const isActive = dropdown.classList.contains('active');
+
+    // Close all other dropdowns
+    document.querySelectorAll('.mobile-dropdown.active').forEach(otherDropdown => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove('active');
+      }
+    });
+
+    // Toggle current dropdown
+    if (isActive) {
+      dropdown.classList.remove('active');
+    } else {
+      dropdown.classList.add('active');
+    }
+  }
+
+  // Event Listeners
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+  }
+
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+  }
+
+  // Mobile dropdown event listeners
+  mobileDropdownBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdown = btn.closest(".mobile-dropdown");
+      const dropdownContent = dropdown.querySelector(".mobile-dropdown-content");
+      const menuContent = document.querySelector(".mobile-menu-content");
+
+      // Toggle this dropdown only
+      const isActive = dropdown.classList.contains("active");
+      closeAllDropdowns(); // Close all first
+
+      if (!isActive) {
+        dropdown.classList.add("active");
+
+        // Wait for the dropdown to expand, then scroll
+        setTimeout(() => {
+          // Get the position of the dropdown button relative to the menu content
+          const btnRect = btn.getBoundingClientRect();
+          const menuRect = menuContent.getBoundingClientRect();
+          const dropdownHeight = dropdownContent.scrollHeight;
+
+          // Calculate if dropdown extends beyond visible area
+          const dropdownBottom = btnRect.bottom - menuRect.top + dropdownHeight;
+          const menuHeight = menuContent.clientHeight;
+
+          if (dropdownBottom > menuHeight) {
+            // Scroll the menu content to show the dropdown
+            const scrollTop = menuContent.scrollTop;
+            const targetScroll = scrollTop + (dropdownBottom - menuHeight) + 20; // 20px padding
+            menuContent.scrollTo({ top: targetScroll, behavior: "smooth" });
+          }
+        }, 150); // Wait for CSS transition to start
+      }
+    });
+  });
+
+  // Helper: Close all dropdowns
+  function closeAllDropdowns() {
+    document.querySelectorAll(".mobile-dropdown.active").forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+
+  // Close mobile menu on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && isMobileMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close mobile menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMobileMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Prevent body scroll when mobile menu is open
+  function preventBodyScroll(e) {
+    if (isMobileMenuOpen && !mobileMenu.contains(e.target)) {
+      e.preventDefault();
+    }
+  }
+
+  // Add touch event listeners for better mobile experience
+  document.addEventListener('touchmove', preventBodyScroll, { passive: false });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    // Close desktop dropdowns if clicking outside
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+
+    // Close mobile dropdowns when clicking outside mobile menu
+    if (!e.target.closest('.mobile-menu') && !e.target.closest('.mobile-menu-btn')) {
+      if (isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Close mobile menu if open
+        if (isMobileMenuOpen) {
+          closeMobileMenu();
+        }
+      }
+    });
+  });
+
+  // Add loading state for buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Add your button click logic here
+      console.log('Button clicked:', this.textContent);
+    });
+  });
+
+  // Improve scrolling within dropdown content areas
+  document.querySelectorAll(".mobile-dropdown-content").forEach(content => {
+    // Enable smooth scrolling for dropdown content
+    content.style.scrollBehavior = "smooth";
+    // Add touch scroll momentum for iOS
+    content.style.webkitOverflowScrolling = "touch";
+  });
+
+  // Ensure mobile menu content is scrollable
+  const mobileMenuContent = document.querySelector(".mobile-menu-content");
+  if (mobileMenuContent) {
+    mobileMenuContent.style.scrollBehavior = "smooth";
+    mobileMenuContent.style.webkitOverflowScrolling = "touch";
+  }
+
+  // Initialize
+  console.log('✅ Simple Responsive Menu initialized successfully!');
+});
+
+  </script>
+</body>
+</html>
